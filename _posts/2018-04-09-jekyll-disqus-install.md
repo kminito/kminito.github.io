@@ -28,7 +28,6 @@ readme.md 파일 참고
 ```sh
 disqus:
   shortname: kminito
-{% endhighlight %}
 ```
 
 #### 3. _include\disqus_comments 파일의 jekyll.environment == "production" 삭제
