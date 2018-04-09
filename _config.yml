@@ -12,7 +12,7 @@ rss: rss
 # dribbble_username: jekyll
 # facebook_username: min.kwon.9
 # flickr_username: jekyll
-instagram_username: cinquasi
+# instagram_username: cinquasi
 # linkedin_username: jekyll
 # pinterest_username: jekyll
 # youtube_username: jekyll
@@ -40,6 +40,7 @@ minima:
 
 # Build settings
 markdown: kramdown
+highlighter: rouge
 theme: minima
 exclude:
   - Gemfile
