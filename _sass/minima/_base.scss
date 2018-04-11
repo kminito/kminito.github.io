@@ -148,7 +148,7 @@ blockquote {
  */
 pre,
 code {
-  font-family: "Consolas", "Menlo", "Monaco", "Courier", monospace;
+  font-family: "Consolas", 'Nanum Gothic', "Menlo", "Monaco", "Courier", monospace;
 
   @include relative-font-size(0.9375);
   border: 1px solid $grey-color-light;
