@@ -1,10 +1,10 @@
 ---
 layout : post
 title : "파이썬 마우스 좌표 확인"
-categories : python
+comments : true
 ---
 
-
+테스트 게시물입니다.
 파이썬으로 마우스 커서의 위치(좌표)를 확인하기 위한 코드입니다.
 
 {% highlight ruby %}

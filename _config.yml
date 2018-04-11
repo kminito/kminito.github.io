@@ -45,10 +45,6 @@ theme: minima
 exclude:
   - Gemfile
   - Gemfile.lock
-kramdown:
-  input: GFM
-  syntax_highliter: rouge
-
 
 disqus:
   shortname: kminito
