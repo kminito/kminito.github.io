@@ -12,7 +12,7 @@ rss: rss
 # dribbble_username: jekyll
 # facebook_username: min.kwon.9
 # flickr_username: jekyll
-# instagram_username: cinquasi
+instagram_username: cinquasi
 # linkedin_username: jekyll
 # pinterest_username: jekyll
 # youtube_username: jekyll
@@ -48,3 +48,5 @@ exclude:
 
 disqus:
   shortname: kminito
+
+# show_excerpts: true

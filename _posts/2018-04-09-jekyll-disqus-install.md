@@ -1,12 +1,13 @@
 ---
 layout: post
 title: "Jekyll에 Disqus 설치하기 (minima theme)"
-categories: Jekyll
+category: jekyll
 ---
 
+__테스트 게시물__  
+### 목표 ###
 ```
-작성중인 테스트 게시물입니다
-블로그 초보
+minima theme을 사용하고 있는 jekyll 블로그에 Disqus를 활성화
 ```
 
 

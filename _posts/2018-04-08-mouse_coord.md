@@ -2,10 +2,13 @@
 layout : post
 title : "파이썬 마우스 좌표 확인"
 comments : true
+category : python
 ---
 
-테스트 게시물입니다.
+
+
 파이썬으로 마우스 커서의 위치(좌표)를 확인하기 위한 코드입니다.
+
 
 {% highlight ruby %}
 from pynput.mouse import Controller
@@ -16,8 +19,12 @@ while(True):
     time.sleep(1)
 {% endhighlight %}
 
-Controller()의 position 메소드가 마우스의 좌표를 리턴하며,
-time 모듈은 일부러 딜레이를 주기 위해 넣었습니다.
+
+`Controller()`의 `position` 메소드가 마우스의 좌표를 리턴하며,
+
+`time` 모듈은 일부러 딜레이를 주기 위해 넣었습니다.
+
+
 
 루프에서 나오려면 어떻게 해야 하는지 몰라 그냥 이렇게 사용했습니다.
 
