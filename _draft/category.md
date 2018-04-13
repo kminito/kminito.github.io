@@ -9,7 +9,7 @@ title: 카테고리
       <h3>
         <li><a href="./category/python">python</a></li>
         <li><a href="./category/vba">vba</a></li>
-        <li><a href="./category/misc">misc</a></li>      
+        <li><a href="./category/misc">miscellaneous</a></li>      
       </h3>
     </ul>
 </div>
