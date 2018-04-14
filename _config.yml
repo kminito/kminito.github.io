@@ -8,9 +8,9 @@ description: > # this means to ignore newlines until "twitter_username:"
 # social links
 # twitter_username: jekyllrb
 github_username:  kminito
-rss: rss
+rss: feed
 # dribbble_username: jekyll
-# facebook_username: min.kwon.9
+# facebook_username:
 # flickr_username: jekyll
 instagram_username: cinquasi
 # linkedin_username: jekyll
