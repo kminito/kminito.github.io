@@ -50,3 +50,5 @@ disqus:
   shortname: kminito
 
 # show_excerpts: true
+
+url: "https://kminito.github.io/" # the base hostname & protocol for your site
