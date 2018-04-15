@@ -52,3 +52,5 @@ disqus:
 # show_excerpts: true
 
 url: "https://kminito.github.io/" # the base hostname & protocol for your site
+
+google_analytics: UA-117534704-1
