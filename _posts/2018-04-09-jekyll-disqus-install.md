@@ -4,7 +4,8 @@ title: "Jekyll에 Disqus 설치하기 (minima theme)"
 category: jekyll
 ---
 
-__테스트 게시물__  
+# __테스트 게시물__  
+
 ### 목표 ###
 ```
 minima theme을 사용하고 있는 jekyll 블로그에 Disqus를 활성화
@@ -25,7 +26,7 @@ minima theme을 사용하고 있는 jekyll 블로그에 Disqus를 활성화
 ### 1. Disqus 가입하기
 
 
-자세한 내용은 생략
+자세한 내용은 생략  
 
 
 ***
@@ -43,7 +44,7 @@ minima theme을 사용하고 있는 jekyll 블로그에 Disqus를 활성화
 disqus:
   shortname: kminito  #당신의 disqus short name으로 바꾸어주세요
 ```
-disqus shortname 확인하는 법 : [여기 클릭](https://help.disqus.com/customer/portal/articles/466208)
+disqus shortname 확인하는 법 : [여기 클릭](https://help.disqus.com/customer/portal/articles/466208)  
 
 ***
 
@@ -59,7 +60,7 @@ if page.comments != false
 
 환경변수를 production으로 바꾸는 것에 실패해서 결국 저 조건문을 삭제하기에 이르렀습니다.
 
-윈도우에서 `JEKYLL_ENV=production`으로 만드는 법을 아시는 분은 좀 알려주세요..
+윈도우에서 `JEKYLL_ENV=production`으로 만드는 법을 아시는 분은 좀 알려주세요..  
 
 
 ***
@@ -68,7 +69,7 @@ if page.comments != false
 ## 결론
 
 최신 버전의 minima에서는 결국 1) `_config.yml`에 `shortname`을 추가하고, 2) `disqus_comments`파일의 조건문 중
- `jekyll.environment == "production"` 조건을 제거하면 작성 포스트에 disqus 공간이 자동으로 생깁니다. 물론 front matter 에서 comments : false를 주면 그 게시물은 disqus가 안 뜹니다.
+ `jekyll.environment == "production"` 조건을 제거하면 작성 포스트에 disqus 공간이 자동으로 생깁니다.
 
  disqus 가이드에 있는 `Universal Embed Code`를 따로 붙여넣기 하지 않아도 되는 이유는 그 코드가 이미 `disqus_comments` 파일에 들어있기 때문입니다. shortname만 잘 적어주면 됩니다.
 
