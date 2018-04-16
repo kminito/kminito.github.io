@@ -1,5 +1,5 @@
-title: 초보 블로그
-author: kminito
+title: 취미로 하는 프로그래밍
+author: 참새
 email: gatsbyfor@gmail.com
 description: > # this means to ignore newlines until "twitter_username:"
   안녕하세요. 취미로 프로그래밍을 시작하며 블로그가
@@ -10,9 +10,9 @@ description: > # this means to ignore newlines until "twitter_username:"
 github_username:  kminito
 rss: feed
 # dribbble_username: jekyll
-# facebook_username:
+facebook_username: min.kwon.9
 # flickr_username: jekyll
-instagram_username: cinquasi
+# instagram_username: cinquasi
 # linkedin_username: jekyll
 # pinterest_username: jekyll
 # youtube_username: jekyll
@@ -54,3 +54,7 @@ disqus:
 url: "https://kminito.github.io/" # the base hostname & protocol for your site
 
 google_analytics: UA-117534704-1
+
+header_pages:
+  - category.html
+  - about.md
