@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "짝 맞추기 게임 봇"
+title: "짝 맞추기 게임(기억력 게임) 봇"
 category: python
 tag: python
 ---
