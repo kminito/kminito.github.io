@@ -67,7 +67,7 @@ Desti = Cells(9, 4).Value & "\" & File_Name # 파일이 복사 및 저장될 위
 FileCopy Star, Desti    # 파일 복사 실행
 
 MsgBox "파일 복사 완료" & Chr(10) & Desti    # 파일이 복사된 위치 표시
-``` 
+```
 
 
 
