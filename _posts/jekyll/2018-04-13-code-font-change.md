@@ -1,23 +1,23 @@
 ---
 layout: post
-title: "Jekyll 코드블록 글씨체 바꾸기"
+title: "Jekyll blog - 코드블록 글씨체 바꾸기"
 category: jekyll
 ---
 
 jekyll 블로그 코드블럭의 글씨체를 아래와 같이 이쁘게 변경하고자 합니다.
 
-#### 변경 전  
+#### 변경 전
 ![font_before]({{ site.url }}/assets/jekyll/code_font_1.jpg)
 
 
-#### 변경 후  
+#### 변경 후
 ![font_after]({{ site.url }}/assets/jekyll/code_font_2.jpg)
 
 
 ___
 ___
 
-### 방법
+#### **방법**
 저는 초보라 이거 글씨체 바꾸는 법 알아내는 데 3일 정도가 걸렸습니다. 덕분에 CSS에 대해서도 좀 알게 되었구요.  
 
 단순하게는 코드에 들어가는 스타일에 글씨체를 지정하면 되는되요, 제가 한 순서는 아래와 같습니다.
@@ -53,3 +53,6 @@ ___
   ///
   </head>
   ```
+
+
+github 주소 : [https://github.com/kminito/kminito.github.io](https://github.com/kminito/kminito.github.io)
