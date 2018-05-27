@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Jekyll favicon 설정하기 "
+title: "Jekyll blog - favicon 설정하기 "
 category: jekyll
 tag:
   - jekyll
