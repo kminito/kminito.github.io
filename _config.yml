@@ -57,4 +57,11 @@ google_analytics: UA-117534704-1
 
 header_pages:
   - category.html
+  - study_notes.md
   - about.md
+
+
+collections:
+  study_notes:
+    output: true
+    permalink: /:collection/:name
