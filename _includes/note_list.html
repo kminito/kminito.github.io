@@ -1,11 +1,11 @@
 
 
 <p>
-  <ul>
+
 {% for item in site.study_notes %}
-<li><a href="{{ item.url }}">{{ item.title }}</a> <br></li>
+<strong><a class="alert-primary" href="{{ item.url }}">{{ item.title }}</a> </strong>
 {% endfor %}
 </p>
-  </ul>
+
 
 </tr>
