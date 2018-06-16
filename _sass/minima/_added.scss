@@ -1,8 +1,24 @@
-.alert-primary {
-  color: #004085;
-  background-color: #cce5ff;
-  border-color: #b8daff;
+.btn-outline-primary {
+  color: #007bff;
+  background-color: transparent;
+
+  border-color: #007bff;
+  display: inline-block;
+  margin: 2px;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  border: 1px solid;
+  padding: .375rem .75rem;
+  line-height: 1.2;
+  border-radius: .25rem;
+
+  box-sizing: border-box;
+
 }
+
 
 
 

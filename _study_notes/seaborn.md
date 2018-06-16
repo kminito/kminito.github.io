@@ -4,21 +4,21 @@ title : seaborn
 ---
 
 
-** seaborn **
+**seaborn**
 
 
 
-{% highlight ruby %}
+```python
 
 import seaborn as sns
 %matplotlib inline
 
 tips = sns.load_dataset('tips')
 
-{% endhighlight %}
+```
 
 
-{% highlight Ruby %}
+```python
 
 sns.distplot(tips['total_bill'])
 sns.distplot(tips['total_bill'],kde=False,bins=30)
@@ -33,12 +33,12 @@ sns.rugplot(tips['total_bill'])
 
 
 
-{% endhighlight %}
+```
 
 
 
 
-{% highlight Ruby %}
+```python
 
 sns.barplot(x='sex',y='total_bill',data=tips)
 sns.barplot(x='sex',y='total_bill',data=tips,estimator=np.std)
@@ -70,4 +70,4 @@ sns.swarmplot(x="tip", y="day", data=tips,color='black',size=3)
 sns.factorplot(x='sex',y='total_bill',data=tips,kind='bar')
 
 
-{% endhighlight %}
+```

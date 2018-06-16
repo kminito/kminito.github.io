@@ -10,14 +10,14 @@ category : python
 파이썬으로 마우스 커서의 위치(좌표)를 확인하기 위한 코드입니다.
 
 #### **소스 코드**
-{% highlight ruby %}
+```python
 from pynput.mouse import Controller
 import time
 
 while(True):
     print("Current position: " + str(Controller().position))
     time.sleep(1)
-{% endhighlight %}
+```
 
 
 #### **사용**

@@ -32,7 +32,7 @@ ___
   ```
 
 4. 그랬더니 전체적으로는 아래와 같은 코드가 되었구요. 이러면 끝입니다. `font-family`에 있는 글꼴들은 앞에서 부터 순차적으로 적용이 됩니다. 위의 경우에는 Consolas가 없으면 나눔고딕이, 나눔고딕도 없으면 Menlo가 적용되는 방식입니다.
-  {% highlight ruby %}
+  ```python
       pre,
         code {
           font-family: "Consolas", 'Nanum Gothic', "Menlo", "Monaco", "Courier", monospace;
@@ -42,7 +42,7 @@ ___
           border-radius: 3px;
           background-color: #eef;
       }
-  {% endhighlight %}
+  ```
 
 
   위의 폰트 중 나눔고딕은 컴퓨터에 기본적으로 설치되어 있지 않은 폰트라, `head.html` 파일에 아래 코드를 추가하여 자동으로 로드(?) 되도록 했습니다.

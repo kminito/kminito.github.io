@@ -40,7 +40,7 @@ ___
 #### 1) PDF 파일의 주소를 불러오기
  아래 코드를 통해, 엑셀 파일와 같은 위치에 있는 PDF 파일의 주소를 불러와 `Current_Path` 변수에 넣습니다. PDF 파일의 이름은 엑셀 시트의 D3 셀에 직접 입력이 되어야 하며, D3 셀에 입력된 값에 따라 D6, D7 셀의 내용도 함께 바뀌도록 셀에 수식이 작성되어 있습니다.
 
-  {% highlight ruby %}
+  ```python
 Dim Current_Path As String
 Dim File_Name As String
 
@@ -52,7 +52,7 @@ File_Name = Cells(3, 4).Value & ".pdf"  # D3셀의 값에 '.pdf'를 붙여 File_
 
 ''On Error GoTo ErrorMessage
 
-  {% endhighlight %}
+  ```
 
 #### 2) PDF 파일을 복사하기  
 `FileCopy` 는 파일을 복사하는 함수입니다. `FileCopy source, destination`과 같은 형식으로 사용이 됩니다. 아래 코드는 `Star` 변수에 할당된 주소의 파일을 `Desti` 변수에 할당된 주소 및 파일명으로 복사합니다.
@@ -75,7 +75,7 @@ MsgBox "파일 복사 완료" & Chr(10) & Desti    # 파일이 복사된 위치 
 원본 PDF 파일을 아웃룩 메일에 첨부하여, D5 셀에 입력된 수신자로
 메일을 발송하는 코드입니다.
 
-  {% highlight ruby %}
+  ```python
 If MsgBox("메일을 전달하겠습니까?", vbQuestion + vbYesNo, "자동 발송") = vbYes Then
                                               # 메일 보낼 것인지 물음
     Dim olApp As Outlook.Application
@@ -104,7 +104,7 @@ End If
 End Sub
 
 ''코드 끝!
-  {% endhighlight %}
+  ```
 
 
 
@@ -124,7 +124,7 @@ ___
 ## 전체 코드  
  - 매크로 파일을 첨부하고 싶으나 지금 뭔가 컴퓨터에 문제가 있어 VBA가 실행이 안 됨. 조만간 할게용
 
-  {% highlight ruby %}
+  ```python
 Option Explicit
 
 Sub Copy_Icebox()
@@ -181,4 +181,4 @@ ErrorMessage:
 End If
 End Sub
 
-  {% endhighlight %}
+  ```

@@ -45,7 +45,7 @@ tag: python
 <br>
 
 ### 전체 코드
-  {% highlight ruby %}
+  ```python
 
 import cv2
 import numpy as np
@@ -133,7 +133,7 @@ while(True):
         cv2.destroyAllWindows()
         break
 
-  {% endhighlight %}
+  ```
 
 
 ### 총평

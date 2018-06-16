@@ -54,14 +54,14 @@ ___
 일단 화면을 다루어야하므로 `OpenCV`와 `ImageGrab`을 import 했습니다.
 
 
-  {% highlight ruby %}
+  ```python
 import cv2
 from PIL import ImageGrab
 import numpy as np
 
 screen = ImageGrab.grab(bbox=(180, 250, 450, 400))       # 모니터의 해당 좌표를 캡쳐
 cv2.imshow('windows',np.array(screen))                   # 위의 화면을 창으로 띄움
-  {% endhighlight %}
+  ```
 
 
 휴대폰 화면의 문제가 나오는 부분이 컴퓨터 모니터에서 (180, 250, 450, 400)이 되도록 창을 위치시켜놓고 진행했습니다.
@@ -70,12 +70,12 @@ cv2.imshow('windows',np.array(screen))                   # 위의 화면을 창�
 
 그 다음에는 위의 화면을 `pytesseract`로 OCR을 하는 것인데요. 코드는 아래와 같습니다.
 
-  {% highlight ruby %}
+  ```python
   import pytesseract
 
 text = pytesseract.image_to_string(screen, lang='kor')   # `screen`를 한국어 OCR을 돌림
 print(text)                                              # 그리고 그것을 프린트
-{% endhighlight %}
+```
 
 
 이까지만 하면 이제 핵심 기능은 잘 작동합니다. 제가 바랐던 것은 특정 버튼을 누르면 그 즉시 OCR을 돌리는 것이었는데요, 그래서 화면을 캡처하는 것을 `while` 루프에 넣고 키보드의 'a' 버튼을 누르면 OCR이 돌아가도록 했습니다. q를 누르면 창이 꺼지구요.  
@@ -89,7 +89,7 @@ ___
 #### 전체 소스코드
 
 
-  {% highlight ruby %}
+  ```python
 import cv2
 import time
 from PIL import ImageGrab
@@ -113,7 +113,7 @@ while True :
         break                                                   # 루프에서 나감
 
 
-  {% endhighlight %}
+  ```
 
 ___
 

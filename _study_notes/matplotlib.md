@@ -7,25 +7,25 @@ title : matplotlib
 
 **Creating NumPy Arrays**
 
-{% highlight ruby %}
+```python
 import matplotlib.pyplot as plt
 %matplotlib inline
-{% endhighlight %}
+```
 
 
 
-{% highlight ruby %}
+```python
 plt.plot(x, y, 'r') # 'r' is the color red
 plt.xlabel('X Axis Title Here')
 plt.ylabel('Y Axis Title Here')
 plt.title('String Title Here')
 plt.show()
-{% endhighlight %}
+```
 
 
 
 **Creating Multiplots on Same Canvas**
-{% highlight ruby %}
+```python
 # plt.subplot(nrows, ncols, plot_number)
 plt.subplot(1,2,1)
 plt.plot(x, y, 'r--') # More on color options later
@@ -33,12 +33,12 @@ plt.subplot(1,2,2)
 plt.plot(y, x, 'g*-');
 
 
-{% endhighlight %}
+```
 
 
 **Matplotlib Object Oriented Method**
 
-{% highlight ruby %}
+```python
 # Create Figure (empty canvas)
 fig = plt.figure()
 
@@ -211,14 +211,14 @@ ax.plot(x, x+16, color="purple", lw=1, ls='-', marker='s', markersize=8,
 
 
 
-{% endhighlight %}
+```
 
 
 
 
 
 
-{% highlight ruby %}
+```python
 
 fig, axes = plt.subplots(1, 3, figsize=(12, 4))
 
@@ -235,12 +235,12 @@ axes[2].set_xlim([2, 5])
 axes[2].set_title("custom axes range");
 
 
-{% endhighlight %}
+```
 
 
 
 
-{% highlight ruby %}
+```python
 plt.scatter(x,y)
 
 
@@ -258,4 +258,4 @@ plt.boxplot(data,vert=True,patch_artist=True);
 
 
 
-{% endhighlight %}
+```

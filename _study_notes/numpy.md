@@ -7,7 +7,7 @@ title : numpy
 
 **Creating NumPy Arrays**
 
-{% highlight ruby %}
+```python
 
 import numpy as np
 
@@ -51,12 +51,12 @@ np.random.randn(5,5)
 np.random.randint(1,100)
 np.random.randint(1,100,10)
 
-{% endhighlight %}
+```
 
 
 **Array Attributes and Methods**
 
-{% highlight ruby %}
+```python
 
 arr = np.arange(25)
 ranarr = np.random.randint(0,50,10)
@@ -79,11 +79,11 @@ arr.dtype
 # 생성과 모양 변경을 동시에
 mat = np.arange(1,26).reshape(5,5)
 
-{% endhighlight %}
+```
 
 **Numpy Indexing and Selection**
 
-{% highlight ruby %}
+```python
 
 arr = np.arange(0,11)
 
@@ -120,10 +120,10 @@ arr_2d[2]
 arr_2d[2,:]
 
 
- {% endhighlight %}
+ ```
 
 **Fancy Indexing**
- {% highlight ruby %}
+ ```python
 
 
 #Set up matrix
@@ -151,13 +151,13 @@ arr[arr>2]
 x = 2
 arr[arr>x]
 
-{% endhighlight %}
+```
 
 
 
 **NumPy Operations**
 
-{% highlight ruby %}
+```python
 
 
 import numpy as np
@@ -180,4 +180,4 @@ np.log(arr) #에러 발생 안 하고 -inf 리턴
 mat.sum(axis=0)
 mat.sum(axis=1)
 
-{% endhighlight %}
+```

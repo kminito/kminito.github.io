@@ -7,7 +7,7 @@ title : pandas
 
 **series**
 
-{% highlight ruby %}
+```python
 
 import numpy as np
 import pandas as pd
@@ -34,11 +34,11 @@ pd.Series(data=labels)
 # Even functions (although unlikely that you will use this)
 pd.Series([sum,print,len])
 
-{% endhighlight %}
+```
 
 **Using an Index**
 
-{% highlight ruby %}
+```python
 
 ser1 = pd.Series([1,2,3,4],index = ['USA', 'Germany','USSR', 'Japan'])              
 ser2 = pd.Series([1,2,5,4],index = ['USA', 'Germany','Italy', 'Japan'])   
@@ -46,11 +46,11 @@ ser1['USA']
 
 ser1 + ser2
 
-{% endhighlight %}
+```
 
 **DataFrames**
 
-{% highlight ruby %}
+```python
 
 import pandas as pd
 import numpy as np
@@ -61,12 +61,12 @@ np.random.seed(101)
 df = pd.DataFrame(randn(5,4),index='A B C D E'.split(),columns='W X Y Z'.split())
 
 
-{% endhighlight %}
+```
 
 
 **Selection and Indexing**
 
-{% highlight ruby %}
+```python
 
 
 df['W']
@@ -99,11 +99,11 @@ df.iloc[2]
 df.loc['B','Y']
 df.loc[['A','B'],['W','Y']]
 
-{% endhighlight %}
+```
 
 **Conditional Selection**
 
-{% highlight ruby %}
+```python
 
 
 df>0 #부울린 리턴
@@ -121,13 +121,13 @@ df[df['W']>0][['Y','X']]
 # for two conditions
 df[(df['W']>0) & (df['Y'] > 1)]
 
-{% endhighlight %}
+```
 
 
 **More Index Details**
 
 
-{% highlight ruby %}
+```python
 
 # Reset to default 0,1...n index
 df.reset_index()
@@ -168,7 +168,7 @@ df.xs('G1')
 df.xs(['G1',1])
 df.xs(1,level='Num')
 
-{% endhighlight %}
+```
 
 
 

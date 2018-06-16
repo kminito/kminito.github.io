@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "마크다운(markdown) - 유튜브 동영상 넣기 "
+title: "마크다운(markdown) 유튜브 동영상 넣기 "
 category: jekyll
 tag:
   - jekyll
@@ -28,10 +28,10 @@ tag:
 **복사한 소스코드**
 
 
-{% highlight Ruby %}
+```html
 <iframe width="640" height="360" src="https://www.youtube.com/embed/kTcRRaXV-fg?ecver=1"  
  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>  
-{% endhighlight %}
+```
 
 
 
@@ -41,19 +41,19 @@ tag:
 대신 CSS를 이용해서 사이즈를 조절하도록 할 수 있음. 아래에서는 iframe에 "youtube"라는 class 이름을 부여하여 div의 크기에 따라 상대적인 크기를 유지하도록 했다.
 
 **CSS 추가 내용**
-{% highlight Ruby %}
+```css
 .youtube{
     width: 100%;
     height: 100%;
 }
-{% endhighlight %}
+```
 
 
 **삽입한 태그**
-{% highlight Ruby %}
+```html
 <iframe class="youtube" src="https://www.youtube.com/embed/kTcRRaXV-fg?ecver=1"  
  frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>  
-{% endhighlight %}
+```
 
 **결과**
 <iframe class="youtube" src="https://www.youtube.com/embed/kTcRRaXV-fg?ecver=1" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>   

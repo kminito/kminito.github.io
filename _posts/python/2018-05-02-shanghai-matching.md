@@ -34,7 +34,7 @@ tag: python
 
 ### 전체 코드
 
-{% highlight ruby %}
+```python
 
 from pynput.mouse import Button, Controller
 import time
@@ -119,7 +119,7 @@ def main():
 if __name__ == '__main__':
     main()
 
-{% endhighlight %}
+```
 
 
 ### 중간 평가
