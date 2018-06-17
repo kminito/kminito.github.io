@@ -26,3 +26,39 @@
     width: 100%;
     height: 100%;
 }
+
+
+
+
+.sidenav {
+    width: 120px;
+    // position: fixed;
+    background: #e6f2ff;
+    overflow-x: hidden;
+    padding: 8px 0;
+    float: left;
+
+}
+
+.sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 14x;
+    color: #0366d6;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #042a49;
+}
+
+.main {
+    margin-left: 130px; /* Same width as the sidebar + left position in px */
+    font-size: $base-font-size; /* Increased text to enable scrolling */
+    padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
