@@ -21,8 +21,10 @@ tag:
 잘 부탁드립니다.  
 
 문제 및 데이터셋 : [Titanic: Machine Learning from Disaster](https://www.kaggle.com/c/titanic)   
-참고한 글 : [Titanic best working Classifier
-](https://www.kaggle.com/sinakhorami/titanic-best-working-classifier)
+참고한 글 : [Titanic Data Science Solutions](https://www.kaggle.com/startupsci/titanic-data-science-solutions)  
+[Titanic best working Classifier
+](https://www.kaggle.com/sinakhorami/titanic-best-working-classifier)  
+
 
 
 

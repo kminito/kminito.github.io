@@ -47,7 +47,7 @@ exclude:
 
 header_pages:
   - category.html
-  - study_notes.md
+  - code_notes.md
   - about.md
 
 minima:
@@ -57,7 +57,9 @@ collections:
   study_notes:
     output: true
     permalink: /:collection/:name
-
+  about:
+    output: true
+    permalink: /:collection/:name
 
 
 google_analytics: UA-117534704-1
