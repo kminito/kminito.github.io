@@ -12,6 +12,7 @@ permalink: /code_notes/
 **즐겨찾는 페이지**  
 
 
-- [Wikidocs 점프투파이썬 내장함수](https://wikidocs.net/32)  
+- [Wikidocs 점프투파이썬](https://wikidocs.net/32)  
 - [마크다운 테이블 생성기](https://www.tablesgenerator.com/)  
 - [Jekyll Document - 한글](https://jekyllrb-ko.github.io/docs/home/)
+- [파이썬 Document - 정규표현식](https://docs.python.org/2/library/re.html)
