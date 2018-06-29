@@ -301,6 +301,16 @@ df['col1'].apply(times2)
 df['col3'].apply(len)
 df['col1'].sum()
 
+
+# pandas.DataFrame.apply
+# axis : {0 or ‘index’, 1 or ‘columns’}, default 0
+# Axis along which the function is applied:
+# 0 or ‘index’: apply function to each column.
+# 1 or ‘columns’: apply function to each row.
+
+
+
+
 del df['col1']
 
 

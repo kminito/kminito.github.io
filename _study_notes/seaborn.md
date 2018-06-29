@@ -27,6 +27,11 @@ sns.jointplot(x='total_bill',y='tip',data=tips,kind='hex')
 sns.jointplot(x='total_bill',y='tip',data=tips,kind='reg')
 
 
+# pairplot 전에 디자인 설정
+sns.set_palette("GnBu_d")
+sns.set_style('whitegrid')
+
+
 sns.pairplot(tips)
 sns.pairplot(tips,hue='sex',palette='coolwarm')
 sns.rugplot(tips['total_bill'])
