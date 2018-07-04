@@ -368,3 +368,10 @@ How many Job Titles were represented by only one person in 2013? (e.g. Job Title
 sum(df[df['Year'] == 2013]['JobTitle'].value_counts() == 1)
 
 ```
+
+```
+
+pd.qcut(range(5), 4)
+pd.cut(np.array([1, 7, 5, 4, 6, 3]), 3)
+
+```
