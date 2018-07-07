@@ -3,6 +3,14 @@ layout: note_layout
 title: "python"
 ---
 
+```python
+# 오른쪽 공백 지우기
+# 왼쪽 공백은 lstrip()
+# 양쪽 다 지우는 건 strip()
+>>> a= " hi "
+>>> a.rstrip()
+' hi'
+```
 
 ```
 문자열 리버스

@@ -8,9 +8,6 @@ tag:
   - "machine_learning"
 ---
 
-### Kaggle - 타이타닉 생존자 예측하기 EDA / Feature Engineering (1)
-
-
 - [Kaggle - 타이타닉 생존자 예측하기 EDA / Feature Engineering (1)]({{ "/machine_learning/2018/06/16/kaggle_titanic_1.html" | absolute_url }})  
 - [Kaggle - 타이타닉 생존자 예측하기 EDA / Feature Engineering (2)]({{ "/machine_learning/2018/06/17/kaggle_titanic_2.html" | absolute_url }})
 

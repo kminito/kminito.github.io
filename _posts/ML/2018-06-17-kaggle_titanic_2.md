@@ -8,7 +8,6 @@ tag:
   - "machine_learning"
 ---
 
-### Kaggle - 타이타닉 생존자 예측하기 EDA / Feature Engineering (2)
 
 
 - [Kaggle - 타이타닉 생존자 예측하기 EDA / Feature Engineering (1)]({{ "/machine_learning/2018/06/16/kaggle_titanic_1.html" | absolute_url }})  
@@ -183,9 +182,3 @@ Title  Survived
 #### 8. 기타
 
 객실 번호를 보여주는 `Cabin` 열은 객실이 있고 없고로 구분하여 데이터를 사용해 볼 수도 있지만, 여기서는 따로 이용하지 않겠습니다.
-
-
-
-### **Data Cleaning and Mapping***
-
-지금부터는 Classification을 위해 숫자가 아닌 데이터들을 숫자로 바꾸고, 또 필요없는 행은 지우도록 하겠습니다. 그 전에, 지금까지의 과정에서

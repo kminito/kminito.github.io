@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "대학교 분류하기 (k-means clustering)"
+title: "k-means Clustering 연습"
 category: "machine_learning"
 tag:
   - "data science"
