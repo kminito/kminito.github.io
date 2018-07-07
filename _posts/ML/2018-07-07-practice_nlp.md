@@ -335,3 +335,95 @@ avg / total       0.66      0.81      0.73      1226
 ```
 
 TF-IDF를 적용하니 오차가 더 커졌습니다.
+
+
+
+#### **참고 - CountVectorizer에 Analyzer** 사용
+
+**문장 부호 삭제**
+```python
+import string
+
+mess = 'Sample message! Notice: it has punctuation.'
+
+# Check characters to see if they are in punctuation
+nopunc = [char for char in mess if char not in string.punctuation]
+
+# Join the characters again to form the string.
+nopunc = ''.join(nopunc)
+```
+
+**stopwords를 살펴보자**
+
+```python
+from nltk.corpus import stopwords
+stopwords.words('english')[0:10] # Show some stop words
+```
+```cmd
+['i', 'me', 'my', 'myself', 'we', 'our', 'ours', 'ourselves', 'you', 'your']
+```
+
+nopunc에는 아래와 같은 단어들이 있는데,
+```python
+nopunc.split()
+```
+```cmd
+['Sample', 'message', 'Notice', 'it', 'has', 'punctuation']
+```
+
+stopwords를 제거해보자
+```python
+clean_mess = [word for word in nopunc.split() if word.lower() not in stopwords.words('english')]
+```
+```python
+clean_mess
+```
+```cmd
+['Sample', 'message', 'Notice', 'punctuation']
+```
+
+위의 것들을 함수로 정의하면
+
+```python
+def text_process(mess):
+    """
+    Takes in a string of text, then performs the following:
+    1. Remove all punctuation
+    2. Remove all stopwords
+    3. Returns a list of the cleaned text
+    """
+    # Check characters to see if they are in punctuation
+    nopunc = [char for char in mess if char not in string.punctuation]
+
+    # Join the characters again to form the string.
+    nopunc = ''.join(nopunc)
+
+    # Now just remove any stopwords
+    return [word for word in nopunc.split() if word.lower() not in stopwords.words('english')]
+```
+
+
+데이터프레임에 적용하면 아래와 같이 된다 된다
+```python
+# Check to make sure its working
+messages['message'].head(5).apply(text_process)
+```
+```cmd
+0    [Go, jurong, point, crazy, Available, bugis, n...
+1                       [Ok, lar, Joking, wif, u, oni]
+2    [Free, entry, 2, wkly, comp, win, FA, Cup, fin...
+3        [U, dun, say, early, hor, U, c, already, say]
+4    [Nah, dont, think, goes, usf, lives, around, t...
+Name: message, dtype: object
+```
+
+적용할 때는 이런 식으로 적용하면 된다.
+```python
+from sklearn.pipeline import Pipeline
+
+pipeline = Pipeline([
+    ('bow', CountVectorizer(analyzer=text_process)),  # strings to token integer counts
+    ('tfidf', TfidfTransformer()),  # integer counts to weighted TF-IDF scores
+    ('classifier', MultinomialNB()),  # train on TF-IDF vectors w/ Naive Bayes classifier
+])
+```
