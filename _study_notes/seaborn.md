@@ -1,6 +1,6 @@
 ---
 layout: note_layout
-title : seaborn
+title : seaborn (삭제 예정)
 ---
 
 

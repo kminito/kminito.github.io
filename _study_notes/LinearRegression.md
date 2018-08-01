@@ -30,7 +30,7 @@ USAhousing.describe()
 대충 어케 생겼는지도
 ```
 
-```
+```python
 디자인 변경
 sns.set_palette("GnBu_d")
 sns.set_style('whitegrid')
@@ -45,7 +45,7 @@ sns.heatmap(USAhousing.corr())
 ```
 
 컬럼을 뽑아서 X, y에 넣고
-```
+```python
 USAhousing.columns
 
 X = USAhousing[['Avg. Area Income', 'Avg. Area House Age', 'Avg. Area Number of Rooms',
@@ -55,7 +55,7 @@ y = USAhousing['Price']
 ```
 
 데이터를 스플릿한다
-```
+```python
 from sklearn.model_selection import train_test_split
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_state=101)
 
@@ -64,7 +64,7 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.4, random_
 그다음 모델을 만들어서 돌리고 확인한다
 
 
-```
+```python
 
 from sklearn.linear_model import LinearRegression
 
@@ -79,7 +79,7 @@ coeff_df
 이제 모델을 적용해본다
 
 
-```
+```python
 
 predictions = lm.predict(X_test)
 plt.scatter(y_test,predictions)
@@ -94,3 +94,4 @@ from sklearn import metrics
 print('MAE:', metrics.mean_absolute_error(y_test, predictions))
 print('MSE:', metrics.mean_squared_error(y_test, predictions))
 print('RMSE:', np.sqrt(metrics.mean_squared_error(y_test, predictions)))
+```

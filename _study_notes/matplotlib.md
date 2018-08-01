@@ -1,6 +1,6 @@
 ---
 layout: note_layout
-title : matplotlib
+title : matplotlib (삭제 예정)
 
 ---
 
