@@ -8,7 +8,7 @@ title: "이력서"
 #### **게임**
 
  리그오브레전드 : [나는야참새](http://www.op.gg/summoner/userName=%EB%82%98%EB%8A%94%EC%95%BC%EC%B0%B8%EC%83%88)  
- 
+
 
 
 #### **학력**
@@ -21,7 +21,10 @@ title: "이력서"
 - 회계관리 2급 / 삼일회계법인
 - 자동차운전면허 1종 보통 / 울산지방경찰청
 
-#### **코딩으로 만들어본 것들**
+#### **수강**
+- Python for Data Science and Machine Learning Bootcamp / Udemy / Jul. 2018
+
+#### **코딩으로 시도한 것들**
 
 - Ruby Gem인 Jekyll 기반의 정적 블로그 (Apr. 2018)  
   **취미로 하는 프로그래밍** [(https://kminito.github.io/)](https://kminito.github.io/)
