@@ -17,8 +17,7 @@ title: 취미로 하는 프로그래밍
 author: 참새
 email: gatsbyfor@gmail.com
 description: > # this means to ignore newlines until "twitter_username:"
-  안녕하세요. 취미로 프로그래밍을 시작하며 블로그가
-   필요할 것 같아 만들어 본 곳입니다. 잘 부탁드립니다. 감사합니다.
+  안녕하세요. 취미로 프로그래밍을 시작하며 블로그가 필요할 것 같아 만들어 본 곳입니다. 잘 부탁드립니다. 감사합니다.
 
 
 github_username:  kminito
@@ -48,7 +47,9 @@ exclude:
 header_pages:
   - category.html
   - code_notes.md
+  - poem.md
   - about.md
+
 
 minima:
   date_format: "%b %-d, %Y"
