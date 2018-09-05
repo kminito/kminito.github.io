@@ -4,20 +4,17 @@ title: 詩
 permalink : /poem/
 ---
 
-
 <div id="archives">
+<div class="archive-group">
+<div id="#poem"></div>
+<p></p>  
 
-  <div class="archive-group">
-
-  <div id="#poem"></div>
-  <p></p>
-    {% for post in site.tags.poem %}
+{% for item in site.poem %}
       <article class="archive-item">
-      <a href="{{ site.baseurl }}{{ post.url }}">{{post.title}}</a>
-      </article>
-    {% endfor %}
+      <a href="{{ item.url }}">{{ item.title }}</a>
+      </article>      
+{% endfor %}
 
-
-  </div>
+</div>
 
 </div>

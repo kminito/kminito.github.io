@@ -61,6 +61,9 @@ collections:
   about:
     output: true
     permalink: /:collection/:name
+  poem:
+    output: true
+    permalink: /:collection/:name
 
 
 google_analytics: UA-117534704-1
