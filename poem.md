@@ -8,6 +8,7 @@ permalink : /poem/
 <div class="archive-group">
 <div id="#poem"></div>
 <p></p>  
+<p> 제가 좋아하는 詩입니다.   </p>
 
 {% for item in site.poem %}
       <article class="archive-item">
