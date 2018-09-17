@@ -246,6 +246,66 @@ for i in range(iters_num):
     train_loss_list.append(loss)
 
 ```
+#### (3) epoch 추가 및 테스트 데이터로 정확도
 
-#### (3) epoch 추가 및 테스트 데이터로 정확도 측정
- - 내용 추가중
+1 epoch : 학습에서 훈련 데이터를 모두 소진했을 때의 횟수  
+ex) 훈련 데이터 10,000개를 100개의 미니배치로 학습할 경우, 확률적 경사 하강법을 100회 반복하면 1 epoch이 됨.
+
+에폭을 반복할수록 훈련 데이터에 대한 정확도가 높아지나, 특정 시점을 지나면 오버피팅이 일어날 수 있음. 나중에 배울 내용이지만, 어느 순간부터 시험 데이터에 대한 정확도가 떨어지면 그 때에 학습을 준단하여 오버피팅을 예방할 수 있음.  
+
+**epoch을 추가한 신경망**
+```python
+import numpy as np
+from dataset.mnist import load_mnist
+
+(x_train, t_train), (x_test, t_test) = load_mnist(normalize=True, one_hot_label=True)
+
+network = TwoLayerNet(input_size = 784, hidden_size = 50, output_size = 10)
+
+# 하이퍼파라미터
+iters_num = 1000 # 반복 횟수
+train_size = x_train.shape[0]
+batch_size = 100 # 미니배치 크기
+learning_rate = 0.1
+
+train_loss_list = []
+train_acc_list = []
+test_acc_list = []
+
+# 1에폭당 반복 수
+iter_per_epoch = max(train_size / batch_size, 1)
+
+for i in range(iters_num):
+    # 미니배치 획득
+    batch_mask = np.random.choice(train_size, batch_size)
+    x_batch = x_train[batch_mask]
+    t_batch = t_train[batch_mask]
+
+    # 기울기 계산
+    grad = network.numerical_gradient(x_batch, t_batch)
+
+    # 매개변수 갱신
+    for key in ('W1', 'b1', 'W2', 'b2'):
+        network.params[key] -= learning_rate * grad[key]
+
+    # 학습 경과 기록      
+    loss = network.loss(x_batch, t_batch)
+    train_loss_list.append(loss)
+
+    # 1에폭당 정확도 계산    
+    if i % iter_per_epoch == 0:
+        train_acc = network.accuracy(x_train, t_train)
+        test_acc = network.accuracy(x_test, t_test)
+        train_acc_list.append(train_acc)
+        test_acc_list.append(test_acc)
+
+        print("train acc, test acc :" + str(train_acc)+ ",", str(test_acc))
+```
+
+`iters_num` 을 100으로 줄이고 했는데도 한바퀴 도는 데 1시간이 걸렸다. 물론 학습 효과는 아주 조금 있었다.
+```python
+plt.plot(train_loss_list)
+```
+![scratch_3_1]({{ site.url }}\assets\ML\scratch\3_1.png)
+
+위의 그래프를 보면 로스가 아주 조금은 줄어들고 있는 것으로 보인다..
