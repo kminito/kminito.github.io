@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "주식/코인 가격 예측 스터디노트 - 1. Google Colab"
+title: "코인 가격 예측 스터디노트 - 1. Google Colab"
 category: "machine_learning"
 tag:
   - "python"
