@@ -25,16 +25,6 @@ df['Day of Week'] = df['Day of Week'].map(dmap)
 ```
 Virtual Env
 ```
-가상환경 만들기 (biopython을 포함한 snowflake라는 가상환)
-conda create --name snowflakes biopython
-
-
-활성화
-activate snowflakes
-활성화
-decativate
-
-quit() 나가기
 
 가상환경 리스트업
 conda info --envs
