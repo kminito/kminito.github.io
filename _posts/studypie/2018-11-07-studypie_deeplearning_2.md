@@ -43,7 +43,7 @@ _(호환성 때문에 버전에 유의해서 깔았습니다..)_
   2. 가상환경 활성화 상태에서 `conda install ipykernel` 입력  
   3. 그리고 `python -m ipykernel install --user --name tf-gpu --display-name "TensorFlow-GPU"`  
   4. 이렇게 하고 나면 Jupyter notebook에서 새 노트북 만들 때 아래와 같이 TensorFlow-GPU 버튼이 생깁니다.  
-    ![ipython-gpu]({{ site.url }}\assets\study_notes\studypie_1\2_1.png)
+    ![ipython-gpu]({{ site.url }}\assets\study_notes\studypie_1\2_1.PNG)
 
 
 여기까지 다 되었으면 준비 완료...!
