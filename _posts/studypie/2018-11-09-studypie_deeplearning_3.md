@@ -281,7 +281,7 @@ checkpoint = ModelCheckpoint("models/{}.model".format(filepath, monitor='val_acc
 
 ``TensorBoard 1.11.0 at http://localhost:8088 (Press CTRL+C to quit)``    
 라고 뜨면 브라우저에 주소를 입력하고 들어갑니다. 아래와 같은 화면을 볼 수 있습니다.  
-    ![tensor_board]({{ site.url }}\assets\study_notes\studypie_1\3_1.png)
+    ![tensor_board]({{ site.url }}\assets\study_notes\studypie_1\3_1.PNG)
 
 
 
@@ -338,7 +338,7 @@ Test accuracy: 0.5704663213670562
 
 텐서보드로 보면 이런식  
 
-![tensor_board2]({{ site.url }}\assets\study_notes\studypie_1\3_2.png)
+![tensor_board2]({{ site.url }}\assets\study_notes\studypie_1\3_2.PNG)
 
 
 #### **총평**
