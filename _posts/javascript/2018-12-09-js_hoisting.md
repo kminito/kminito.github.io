@@ -35,7 +35,8 @@ W3SCHOOL의 설명 (https://www.w3schools.com/js/js_hoisting.asp)
 
 그러니까 실제로는 코드가 옮겨지는 것은 아닙니다. 그렇다면 자바스크립트가 어떻게 작동하길래 이게 가능한 걸까요.
 
-먼저 Execution Context의 개념에 대해 이해할 필요가 있습니다. 간단한 이해를 위해 아래 링크 및 유튜브 동영상을 참고해주세요.
+먼저 Execution Context를 이해하면 자바스크립트의 엔진의 작동 방식을 이해하는 데 도움이 됩니다.  
+Execution Context에 대한 내용은 아래 링크를 참고해주세요.
 
 
 - 실행 컨텍스트와 자바스크립트의 동작 원리 (https://.com/js-execution-context)
@@ -58,10 +59,7 @@ W3SCHOOL의 설명 (https://www.w3schools.com/js/js_hoisting.asp)
 
 #### **ES6의 Execution Context**
 
-먼저 위의 내용을 공부했다면, Excution Context가 무엇이고 코드가 어떻게 실행되는지에 대한 어느 정도의 이해가 있을 것입니다. ES6에서 Execution Context가 이전과는 조금 달라졌습니다.
-
-ES6의 Execution Context의 components는 아래와 같습니다
-
+ES6에서 Execution Context가 이전과 조금 달라졌습니다.
 
 ![]({{ site.url }}/assets/javascript/table21_EC1.png)
 ![]({{ site.url }}/assets/javascript/table22_EC2.png)       
