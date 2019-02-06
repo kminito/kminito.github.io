@@ -1,0 +1,80 @@
+---
+#
+# By default, content added below the "---" mark will appear in the home page
+# between the top bar and the list of recent posts.
+# To change the home page layout, edit the _layouts/home.html file.
+# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
+#
+layout: home
+---
+<p> 프로그래밍 초보의 블로그입니다.<br>
+  잘못된 것이 있으면 지적해주세요. 감사합니다. </p>
+
+
+  {%- if site.posts.size > 0 -%}
+    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
+    <ul class="post-list">
+
+      {%- for post in paginator.posts -%}
+      <li>
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        <h3>
+          <a class="post-link" href="{{ post.url | relative_url }}">
+            {{ post.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ post.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+
+  {%- endif -%}
+  <br>
+
+
+
+  <!-- Pagination links -->
+    <ul class="pagination">
+
+      <!-- 이전 페이지 버튼 -->
+    {% if paginator.previous_page %}
+    <li class="page-item" >
+      <a class="pagiation-link" href="{{ paginator.previous_page_path }}">Previous</a>
+    </li>
+    {% else %}
+    <li class="page-item disabled">
+        <a class="pagiation-link" href="#" tabindex="-1">Previous</a>
+    </li>
+    {% endif %}
+
+      <!-- 페이지 번호 -->
+    {% for i in (1..paginator.total_pages) %}
+      {% if paginator.page == i %}
+      <li class="page-item active">
+        <a class="pagiation-link" href="#"> {{ i }}</a>
+      </li>
+      {% else %}
+        <li class="page-item">
+          <a class="pagiation-link" href="{{ site.baseurl }}/main/page{{i}}">{{ i }}</a>
+        </li>
+      {% endif %}
+    {% endfor %}
+
+    <!-- 다음 페이지 버튼 -->
+    {% if paginator.next_page %}
+      <li><a class="pagiation-link" href="{{ paginator.next_page_path }}">Next</a></li>
+    {% else %}
+      <li class="page-item disabled">
+        <a class="pagiation-link" href="#" tabindex="-1">Next</a>
+      </li>
+    {% endif %}
+    </ul>
+
+
+
+
+      <br>
+  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
