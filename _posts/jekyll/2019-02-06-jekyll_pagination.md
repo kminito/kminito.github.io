@@ -66,7 +66,7 @@ for post in paginator.posts // 템플릿태그 생략
 그리고 위 내용을 포함하여 포스트 제목 등을 렌더링하는 부분 전체를 index.html로 이동
 
 (Syntax Highlight에 Template Tag가 적용되지 않아 스크린샷으로 올립니다. 전체 소스코드는 깃허브에서 확인 가능합니다.)
-[https://github.com/kminito/kminito.github.io/blob/master/index.html](https://github.com/kminito/kminito.github.io/blob/master/index.html)
+[https://github.com/kminito/kminito.github.io/blob/9f1f972b672be4fc5b93c0b963ba503e5c1d6e26/index.html](https://github.com/kminito/kminito.github.io/blob/9f1f972b672be4fc5b93c0b963ba503e5c1d6e26/index.html)
 
 __index.html__ 파일의 일부
 ![]({{ site.url }}/assets/jekyll/2019-02-06-jekyll_pagination/3.png)
