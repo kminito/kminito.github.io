@@ -21,6 +21,9 @@ description: > # this means to ignore newlines until "twitter_username:"
 
 
 github_username:  kminito
+linkedin_username: min-kwon
+# youtube_channel:  UCQu72E1C_2SZ1REKNgckC4w
+# youtube_channel_name: MIN KWON
 rss: feed
 
 baseurl: "" # the subpath of your site, e.g. /blog
