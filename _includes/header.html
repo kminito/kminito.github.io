@@ -29,6 +29,9 @@
             <a class="page-link" href="{{ my_page.url | relative_url }}">{{ my_page.title | escape }}</a>
             {%- endif -%}
           {% endfor -%}
+
+          <a href="search"><svg class="svg-icon"><use xlink:href="{{ '/assets/minima-social-icons.svg#search' | relative_url }}"></use></svg> </a>
+          <!-- <a href=""><img class="page-logo" src="{{ site.url }}/assets/search-solid.svg"></a> -->
         </div>
       </nav>
     {%- endif -%}
