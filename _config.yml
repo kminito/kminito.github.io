@@ -35,7 +35,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 markdown: kramdown
 theme: minima
 plugins:
-  # - jekyll-paginate
+  - jekyll-paginate
   - jekyll-feed
 
 
@@ -87,5 +87,5 @@ disqus:
 #   - vendor/gems/
 #   - vendor/ruby/
 
-# paginate: 10
-# paginate_path: "/main/page:num/"
+paginate: 10
+paginate_path: "/main/page:num/"
