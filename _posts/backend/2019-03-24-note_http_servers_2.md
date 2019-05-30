@@ -3,7 +3,8 @@ layout: post
 title: "스터디 노트 - Udacity HTTP & Web Servers (2) The Web from Python"
 category: backend
 tag:
-  - Django
+  - python
+  - web
 ---
 
 ### **Python's http.server**

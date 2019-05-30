@@ -2,7 +2,9 @@
 layout: post
 title: "파이썬을 통한 잼라이브 문제 OCR 실패기"
 category: python
-tag: jamlive
+tag :
+ - python
+ - ocr
 ---
 
 

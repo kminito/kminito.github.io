@@ -2,7 +2,9 @@
 layout: post
 title: "WeChall Training: Programming 1 - 풀이 (write-up)"
 category: hacking
-tag: wechall
+tag:
+  - hacking
+  - wechall
 ---
 
 그냥 리퀘스트를 날리면 안 된다. 쿠키를 헤더에 집어넣어야 한다.

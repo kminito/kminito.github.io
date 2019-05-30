@@ -3,6 +3,7 @@ layout : post
 title : "파이썬 마우스 좌표 확인"
 comments : true
 category : python
+tag : python
 ---
 
 

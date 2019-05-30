@@ -3,6 +3,7 @@ layout: post
 title: "Javascript - 호이스팅의 이해 (ES6)"
 category: "javascript"
 tag:
+ - javascript
 ---
 
 
@@ -31,7 +32,7 @@ W3SCHOOL의 설명 (https://www.w3schools.com/js/js_hoisting.asp)
 > 호이스팅(hoisting)은 ECMAScript® 2015 언어 명세 및 그 이전 표준 명세에서 사용된 적이 없는 용어입니다. 호이스팅은 JavaScript에서 실행 콘텍스트(특히 생성 및 실행 단계)가 어떻게 동작하는가에 대한 일반적인 생각으로 여겨집니다. 하지만 호이스팅은 오해로 이어질 수 있습니다. 예를 들어, 호이스팅을 변수 및 함수 선언이 물리적으로 작성한 코드의 상단으로 옮겨지는 것으로 가르치지만, 실제로는 그렇지 않습니다. 변수 및 함수 선언은 컴파일 단계에서 메모리에 저장되지만, 코드에서 입력한 위치와 정확히 일치한 곳에 있습니다.  
 
 
-  
+
 
 그러니까 실제로는 코드가 옮겨지는 것은 아닙니다. 그렇다면 자바스크립트가 어떻게 작동하길래 이게 가능한 걸까요.
 
@@ -50,7 +51,7 @@ Execution Context에 대한 내용은 아래 링크를 참고해주세요.
 
 #### **Specification**
 
-호이스팅을 이해하기 위해서는 명세(Specification)를 찾아볼 수 밖에 없습니다. 
+호이스팅을 이해하기 위해서는 명세(Specification)를 찾아볼 수 밖에 없습니다.
 아래의 모든 표, 코드 등의 출처는 표기가 없는 한 아래의 명세입니다.
 (2018년 12월 9일 기준)
 
@@ -68,7 +69,7 @@ ES6에서 Execution Context가 이전과 조금 달라졌습니다.
 
 #### **작동 순서**
 
-코드가 해석되고 실행되는 과정은 Execution Context의 생성과 실행으로 이해할 수 있는데요, 사실은 간단한 두 스텝으로 이루어진 것이 아니라 자바스크립트 엔진의 여러 연산을 거쳐서 생성과 실행 과정이 이루어지게 됩니다. 
+코드가 해석되고 실행되는 과정은 Execution Context의 생성과 실행으로 이해할 수 있는데요, 사실은 간단한 두 스텝으로 이루어진 것이 아니라 자바스크립트 엔진의 여러 연산을 거쳐서 생성과 실행 과정이 이루어지게 됩니다.
 
 
 **호이스팅과 관련이 있는 자바스크립트 코드 해석 순서**  
@@ -93,14 +94,14 @@ RunJobs의 InitializeHostDefinedRealm에서 새로운(null) Execution Context를
 
 
 GlobalDeclarationInstantiation 연산에서 CreateGlobalFunctionBinding와 CreateGlobalVarBinding 두 연산이 각각 전역 함수와 변수를 초기화하고 바인딩합니다. 아래는 GlobalDeclarationInstantiation 추상연산의 일부입니다. 해당 부분만 짤라왔습니다. (17, 18번)
-    
+
 ![]({{ site.url }}/assets/javascript/15.1.11_globaldeclara.png)  
 
 
 #### **CreateGlobalFunctionBinding**
 
 
-전역 Environment Record의 [[ObjectRecord]]에 담아놨던 functionsToInitialize의 바인딩을 생성하고 초기화합니다. Object Environment Record의 함수 객체에 함수의 내용(PropertyDescriptor) 및 바인딩된 이름이 저장됩니다. 해당하는 Global Object에는 **function**에 대한 속성 값이 저장됩니다. 함수가 실행되기 전에 바인딩을 생성하는 이 단계가 함수 호이스팅을 가능하게 합니다. 
+전역 Environment Record의 [[ObjectRecord]]에 담아놨던 functionsToInitialize의 바인딩을 생성하고 초기화합니다. Object Environment Record의 함수 객체에 함수의 내용(PropertyDescriptor) 및 바인딩된 이름이 저장됩니다. 해당하는 Global Object에는 **function**에 대한 속성 값이 저장됩니다. 함수가 실행되기 전에 바인딩을 생성하는 이 단계가 함수 호이스팅을 가능하게 합니다.
 
 
 #### **CreateGlobalVarBinding**
@@ -130,4 +131,3 @@ ScriptEvaluation 연산에서, 지금까지 살펴본 GlobalDeclarationInstantia
 #### **후기**
 
 CreateGlobalFunctionBinding과 CreatGlobalVarBinding의 하위 연산은 아직 이해가 되지 않는 부분이 있습니다. 혹시 더 알게 되면 내용을 추가하도록 하겠습니다. 잘못된 것이 있다면 마음껏 지적해주세요. 감사합니다.
-

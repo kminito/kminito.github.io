@@ -1,11 +1,10 @@
 ---
 layout: post
-title: "블록체인 관련 메모 (2018.09.02)"
+title: "블록체인과 보안 메모"
 category: "etc"
 tag:
-  - "python"
-  - "data science"
-  - "machine_learning"
+  - "block chain"
+  - "bitcoin"
 ---
 
 

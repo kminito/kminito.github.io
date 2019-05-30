@@ -1,78 +1,46 @@
 ---
-#
-# By default, content added below the "---" mark will appear in the home page
-# between the top bar and the list of recent posts.
-# To change the home page layout, edit the _layouts/home.html file.
-# See: https://jekyllrb.com/docs/themes/#overriding-theme-defaults
-#
-layout: home
+layout: page
+description: "코딩으로 자아실현"
 ---
-<p> 프로그래밍 초보의 블로그입니다.<br>
-  잘못된 것이 있으면 지적해주세요. 감사합니다. </p>
 
-
-  {%- if site.posts.size > 0 -%}
-    <h2 class="post-list-heading">{{ page.list_title | default: "Posts" }}</h2>
-    <ul class="post-list">
-      {%- for post in paginator.posts -%}
-      <li>
-        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
-        <h3>
-          <a class="post-link" href="{{ post.url | relative_url }}">
-            {{ post.title | escape }}
-          </a>
+{% for post in paginator.posts %}
+<div class="post-preview">
+    <a href="{{ post.url | prepend: site.baseurl }}">
+        <h2 class="post-title">
+            {{ post.title }}
+        </h2>
+        {% if post.subtitle %}
+        <h3 class="post-subtitle">
+            {{ post.subtitle }}
         </h3>
-        {%- if site.show_excerpts -%}
-          {{ post.excerpt }}
-        {%- endif -%}
-      </li>
-      {%- endfor -%}
-    </ul>
+        {% endif %}
+        <div class="post-content-preview">
+            {% if post.lang == 'en' %}
+                {{ post.content | strip_html | truncate:300 }}
+            {% else %}
+                {{ post.content | strip_html | truncate:200 }}
+            {% endif %}
+        </div>
+    </a>
+    <p class="post-meta">
+        Posted on {{ post.date | date: "%B %-d, %Y" }}
+    </p>
+</div>
+<hr>
+{% endfor %}
 
-  {%- endif -%}
-  <br>
-
-
-
-
-
-  {% if paginator.total_pages > 1 %}
-  <ul class="pagination">
+<!-- Pager -->
+{% if paginator.total_pages > 1 %}
+<ul class="pager">
     {% if paginator.previous_page %}
-      <li class="page-item" >
-      <a class="pagiation-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">Previous</a>
-    </li>
-    {% else %}
-    <li class="page-item disabled">
-        <a class="pagiation-link" href="#" tabindex="-1">Previous</a>
+    <li class="previous">
+        <a href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">&larr; Newer Posts</a>
     </li>
     {% endif %}
-
-    {% for page in (1..paginator.total_pages) %}
-      {% if page == paginator.page %}
-        <li class="page-item active">
-          <a class="pagiation-link" href="#"> {{ page }}</a>
-          </li>
-      {% elsif page == 1 %}
-      <li class="page-item">
-        <a class="pagiation-link" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}">{{ page }}</a>
-        </li>
-      {% else %}
-      <li class="page-item">
-        <a class="pagiation-link" href="{{ site.paginate_path | prepend: site.baseurl | replace: '//', '/' | replace: ':num', page }}">{{ page }}</a>
-      </li>
-      {% endif %}
-    {% endfor %}
-
     {% if paginator.next_page %}
-    <li>
-      <a class="pagiation-link" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Next &raquo;</a>
-    </li>
-    {% else %}
-    <li class="page-item disabled">
-      <a class="pagiation-link" href="#" tabindex="-1">Next</a>
+    <li class="next">
+        <a href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}">Older Posts &rarr;</a>
     </li>
     {% endif %}
-  </ul>
-  {% endif %}
+</ul>
+{% endif %}

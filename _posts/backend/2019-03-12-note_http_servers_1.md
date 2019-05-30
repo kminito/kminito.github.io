@@ -3,7 +3,8 @@ layout: post
 title: "스터디 노트 - Udacity HTTP & Web Servers (1) Requests and Responses"
 category: backend
 tag:
-  - Django
+  - python
+  - web
 ---
 
 ## **1. URI**
