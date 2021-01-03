@@ -1,4 +1,4 @@
-User-agent: *
-Allow: /
+User-agent: * 
+Disallow: /
 
 Sitemap: http://kminito.github.io/sitemap.xml
